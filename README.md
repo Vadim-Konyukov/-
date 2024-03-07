@@ -18,7 +18,7 @@ def func(n: str, symbol):
         s.append(start)
     return s
 
-    # Задание №10
+# Задание №10
     a = 1
 b = 5
 x = [_ for _ in range(a, b + 1)]
@@ -28,3 +28,22 @@ y = [_ for _ in range(c, d + 1)]
 
 e = set(x) & set(y)
 print(e)
+
+# Задание №6
+def func(string, index):
+    if string[:index].count('\'') % 2 == 1 and '\'' in string[index+1::]:
+        return True
+    return False
+
+# Задание №9
+
+def func(string: str, pos):
+    row = 1
+    col = 1
+    for i in range(pos):
+        if string[i] == '\n':
+            row += 1
+            col = 1
+        else:
+            col += 1
+    return row, col
